@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CloudIngestion.Api/CloudIngestion.Api.csproj" />
+    <Project Path="src/CloudIngestion.Core/CloudIngestion.Core.csproj" />
+    <Project Path="src/CloudIngestion.Infrastructure/CloudIngestion.Infrastructure.csproj" />
+    <Project Path="src/CloudIngestion.Worker/CloudIngestion.Worker.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CloudIngestion.Api.Tests/CloudIngestion.Api.Tests.csproj" />
+    <Project Path="tests/CloudIngestion.Core.Tests/CloudIngestion.Core.Tests.csproj" />
+    <Project Path="tests/CloudIngestion.Worker.Tests/CloudIngestion.Worker.Tests.csproj" />
+  </Folder>
+</Solution>

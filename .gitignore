@@ -1,0 +1,33 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.swp
+TestResults/
+publish/
+
+# dotnet secrets
+appsettings.*.local.json
+secrets.json
+
+# Upload storage (local dev)
+uploads/
+
+# Node
+node_modules/
+dist/
+.env
+.env.local
+
+# Docker
+.docker/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Rider/VS Code
+.idea/
+.vscode/
