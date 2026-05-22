@@ -138,7 +138,8 @@ Worker Service
    |
    v
 PostgreSQL
-6. Planned Technology Stack
+```
+##6. Planned Technology Stack
 Backend
 C#
 ASP.NET Core
@@ -187,8 +188,8 @@ Hard target enforcement
 Run/session tracing
 Validation command capture
 Reviewer packet generation
-7. System Components
-7.1 API Service
+##7. System Components
+###7.1 API Service
 
 The API service is responsible for:
 
@@ -212,7 +213,7 @@ Possible later endpoints:
 POST /api/auth/login
 GET  /api/audit/events
 POST /api/files/{id}/retry
-7.2 Object Storage
+###7.2 Object Storage
 
 The platform separates binary file storage from relational metadata storage.
 
@@ -238,7 +239,7 @@ S3ObjectStorage
 
 This keeps the application testable and prevents cloud-specific details from leaking through the core API.
 
-7.3 Metadata Database
+###7.3 Metadata Database
 
 PostgreSQL stores durable metadata records.
 
@@ -264,7 +265,7 @@ Queued
 Processing
 Completed
 Failed
-7.4 Queue Publisher
+###7.4 Queue Publisher
 
 After an upload is accepted and metadata is persisted, the API publishes a processing job.
 
@@ -284,7 +285,7 @@ SqsProcessingQueue
 
 The purpose is to demonstrate an event-driven architecture without forcing cloud infrastructure into the earliest development milestone.
 
-7.5 Worker Service
+###7.5 Worker Service
 
 The worker service consumes processing jobs and updates file records.
 
@@ -300,7 +301,7 @@ Avoid corrupting file state during failed processing
 
 The first worker implementation should stay intentionally simple. Metadata extraction should focus on file properties, not complex domain-specific analysis.
 
-7.6 React Dashboard
+###7.6 React Dashboard
 
 The dashboard will provide a minimal user interface for:
 
@@ -312,7 +313,7 @@ Seeing failure messages
 
 The frontend is not the primary engineering focus, but it makes the system easier to demonstrate.
 
-8. PATH Development Harness
+##8. PATH Development Harness
 
 This project will be developed using a hybrid workflow.
 
